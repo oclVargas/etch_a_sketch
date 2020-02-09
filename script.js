@@ -1,14 +1,24 @@
 const board = document.querySelector('#board');
+const resetBoard = document.querySelector('.btn-reset');
 
 function colorChange(div) {
     div.style.backgroundColor = 'red';
 }
 
+function boardReset() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.style.backgroundColor = '#FFF'
+    })
+}
+
+
+
 function createBoard() {
     
     // variables for size of cell and container maybe?
-    let cellWidth = 50 
-    let cellHeight = 50
+    let cellWidth = 100 
+    let cellHeight = 100
     let gridContainerSize = 16;
     
     for (let i = 0; i < gridContainerSize; i++) {
@@ -23,4 +33,5 @@ function createBoard() {
     }
 }
 
+resetBoard.addEventListener('click', boardReset);
 createBoard();
