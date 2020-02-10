@@ -14,11 +14,12 @@
 }
 
 #board {
-    height: max-content;
-    display: grid;
+    height: 540px;
+    width: 500px;
+    display: inline-grid;
     justify-content: center;
     align-content: center;
-    grid-template: repeat(4, 100px) / repeat(4, 100px);
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     border: 50px solid seagreen;
     border-bottom: 90px solid seagreen;
     border-radius: 6px;
